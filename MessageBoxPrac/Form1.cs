@@ -16,5 +16,16 @@ namespace MessageBoxPrac
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("김건학");
+            MessageBox.Show("김건학", "세젤귀남");
+            DialogResult result;
+            do
+            {
+                result = MessageBox.Show("김건학", "세젤귀남", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Exclamation);
+            } while (result == DialogResult.Retry);
+        }
     }
 }
